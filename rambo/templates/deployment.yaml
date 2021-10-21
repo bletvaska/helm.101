@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: rambo
-  name: rambo
+    app: {{ .Release.Name }}-rambo-{{ .Values.part }}
+  name: {{ .Release.Name }}-rambo-{{ .Values.part }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: rambo
+      app: {{ .Release.Name }}-rambo-{{ .Values.part }}
   template:
     metadata:
       labels:
-        app: rambo
+        app: {{ .Release.Name }}-rambo-{{ .Values.part }}
     spec:
       containers:
-      - image: bletvaska/rambo:1
-        name: rambo
+      - image: bletvaska/rambo:{{ .Values.part }}
+        name: {{ .Release.Name }}-rambo-{{ .Values.part }}

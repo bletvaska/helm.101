@@ -1,6 +1,6 @@
 apiVersion: v2
 name: rambo
-description: The Rambo mega husta application.
+description: First Blood Part
 type: application
-version: 3.0.0
+version: 1.0.0
 appVersion: "1.16.0"

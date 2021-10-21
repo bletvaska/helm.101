@@ -1,0 +1,4 @@
+part: 3
+
+service:
+  port: 80
