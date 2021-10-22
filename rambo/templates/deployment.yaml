@@ -15,5 +15,5 @@ spec:
         app: {{ .Release.Name }}-rambo-{{ .Values.part }}
     spec:
       containers:
-      - image: bletvaska/rambo:{{ .Values.part }}
+      - image: bletvaska/rambo:{{ .Values.part | default 1 }}
         name: {{ .Release.Name }}-rambo-{{ .Values.part }}
