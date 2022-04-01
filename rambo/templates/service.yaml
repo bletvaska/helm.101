@@ -2,12 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: {{ .Release.Name }}-rambo-{{ .Values.part | default 1 }}
-  name: {{ .Release.Name }}-rambo-{{ .Values.part | default 1}}
+    app: {{ .Release.Name }}-{{ .Chart.Name | lower }}-{{ .Values.part | default 1 }}
+  name: {{ .Release.Name }}-{{ .Chart.Name | lower }}-{{ .Values.part | default 1 }}
 spec:
   ports:
-  - port: {{ .Values.service.port }}
+  - port: 80
     protocol: TCP
     targetPort: 80
   selector:
-    app: {{ .Release.Name }}-rambo-{{ .Values.part | default 1 }}
+    app: {{ .Release.Name }}-{{ .Chart.Name | lower }}-{{ .Values.part | default 1 }}

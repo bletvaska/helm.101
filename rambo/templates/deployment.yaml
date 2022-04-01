@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: {{ .Release.Name }}-rambo-{{ .Values.part }}
-  name: {{ .Release.Name }}-rambo-{{ .Values.part }}
+    app: {{ .Release.Name }}-{{ .Chart.Name | lower }}-{{ .Values.part | default 1 }}
+  name: {{ .Release.Name }}-{{ .Chart.Name | lower }}-{{ .Values.part | default 1 }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-rambo-{{ .Values.part }}
+      app: {{ .Release.Name }}-{{ .Chart.Name | lower }}-{{ .Values.part | default 1 }}
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-rambo-{{ .Values.part }}
+        app: {{ .Release.Name }}-{{ .Chart.Name | lower }}-{{ .Values.part | default 1 }}
     spec:
       containers:
       - image: bletvaska/rambo:{{ .Values.part | default 1 }}
-        name: {{ .Release.Name }}-rambo-{{ .Values.part }}
+        name: {{ .Release.Name }}-{{ .Chart.Name | lower }}-{{ .Values.part | default 1 }}

@@ -1,6 +1,0 @@
-apiVersion: v2
-name: rambo
-description: First Blood Part
-type: application
-version: 1.0.0
-appVersion: "1.16.0"

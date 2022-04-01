@@ -1,0 +1,11 @@
+image:
+  repository: bletvaska/rambo
+  tag: 1
+
+containerPorts:
+  http: 80
+
+replicaCount: 2
+
+service:
+  port: 9000

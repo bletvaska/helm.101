@@ -1,9 +1,0 @@
-dependencies:
-- name: wordpress
-  repository: https://charts.bitnami.com/bitnami
-  version: 12.1.23
-- name: adminer
-  repository: https://cetic.github.io/helm-charts
-  version: 0.1.7
-digest: sha256:4c2ba8db5652b26fe394efb1a482d4734efea4cdd31bc17b76c9033b8e2671d3
-generated: "2021-10-22T10:35:33.554388052+02:00"
